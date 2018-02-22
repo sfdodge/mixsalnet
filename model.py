@@ -1,5 +1,5 @@
 """
-Mixnet model definition (CVPR2017 submission #3314)
+Mixnet model definition
 """
 from __future__ import division
 from keras.models import Model

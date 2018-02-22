@@ -1,5 +1,5 @@
 """
-Main training code of mixnet model (CVPR 2017 submission #3314)
+Main training code of mixnet model
 """
 import numpy as np
 np.random.seed(0)
