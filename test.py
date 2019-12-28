@@ -8,7 +8,7 @@ from db import DB
 from model import build_model
 # from baseline_model import build_model
 
-import samlib.misc.pbar
+from pbar import my_pbar
 import os
 import scipy
 from utilities import postprocess_predictions
@@ -45,7 +45,7 @@ def main(seed=0):
 
     inputs = db['images']
     fnames = db['image_names']
-    bar = samlib.misc.pbar()
+    bar = my_pbar()
     for i in bar(test_inds):
         fname = fnames[i]
 

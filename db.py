@@ -6,10 +6,10 @@ import numpy as np
 import h5py
 import os
 import glob
-import samlib
 import utilities
 import cv2
 from sklearn.model_selection import StratifiedKFold
+from pbar import my_pbar
 
 
 TYPES = ['Action','Art','Cartoon','Indoor','Jumbled','LowResolution','Object','OutdoorNatural','Random','Sketch','Affective','BlackWhite','Fractal','Inverted','LineDrawing','Noisy','OutdoorManMade','Pattern','Satelite','Social',]
@@ -59,7 +59,7 @@ class DB():
         self.db['class'] = np.empty(num, dtype=np.uint8) # the class of each box
         self.db['image_names'] = np.empty((num,1),dtype='|S150') # the image names
 
-        pbar = samlib.misc.pbar('Generate database:')
+        pbar = my_pbar('Generate database:')
         for i, name in enumerate(pbar(names)):
             im, fix, dense = self.loadIm(name, im_dir, fix_dir, dense_dir)
 

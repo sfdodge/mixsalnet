@@ -63,9 +63,6 @@ def main():
     # save model
     model.save(MODEL_DIR + MODEL_NAME + '.h5')
 
-    # send email
-    samlib.misc.sendmail('Saliency done')
-
 
 def generator(db, dbtype, batchsize, shuffle=False, augment=True):
     inputs = db['images']
