@@ -1,7 +1,7 @@
 h5py == 2.5.0
 Keras == 1.1.2
 numpy == 1.11.2
-scipy == 0.16.1
+scipy == 1.10.0
 Theano == 0.9.0
 config == 0.3.9
 scikit_learn == 0.18.1
